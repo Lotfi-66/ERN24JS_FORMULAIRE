@@ -1,15 +1,17 @@
-import Form from "./Classes/Form";
+import Form from './Classes/Form';
 
-
-
-class App{
-    start(){
-        console.log ("App Started");
-        const game = new Game(WORDS);
-        game.init();
-}
+class App {
+    start() {
+        console.log("App Started");
+        const form = new Form();
+        form.init();
+    }
 }
 
 const app = new App();
+
+document.addEventListener("DOMContentLoaded", () => {
+    app.start();
+});
 
 export default app;
