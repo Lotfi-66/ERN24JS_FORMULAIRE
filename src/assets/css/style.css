@@ -1,34 +1,55 @@
-/* styles.css */
 body {
-  display: flex;
-  justify-content: center; /* Centre le contenu horizontalement */
-  align-items: center; /* Centre le contenu verticalement */
-  height: 100vh; /* Utilise la hauteur totale de la fenêtre */
   margin: 0;
+  height: 100vh;
+  /* Utilise la hauteur totale de la fenêtre */
+  overflow: hidden;
+  /* Empêche le défilement si nécessaire */
+  position: relative;
+  /* Permet de positionner des éléments absolus par rapport au body */
 }
 
 #app {
-  text-align: center;
+  position: fixed;
+  /* Fixe le conteneur pour qu'il reste en place */
+  top: 0;
+  /* Positionne en haut de la page */
+  left: 0;
+  /* Positionne à gauche de la page */
+  width: 33vw;
+  /* Définit la largeur à un tiers de la largeur de la fenêtre */
+  height: 100vh;
+  /* Définit la hauteur à la hauteur totale de la fenêtre */
+  padding: 20px;
+  /* Ajoute du padding pour l'espacement */
+  box-sizing: border-box;
+  /* Inclut le padding et la bordure dans les dimensions */
 }
 
 #showFormButton {
+  position: fixed;
+  /* Fixe le bouton en position absolue */
+  top: 50%;
+  /* Positionne verticalement au milieu de l'écran */
+  left: 50%;
+  /* Positionne horizontalement au milieu de l'écran */
+  transform: translate(-50%, -50%);
+  /* Ajuste la position pour centrer le bouton */
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
 }
 
-/* styles.css */
 .hidden {
   display: none;
 }
 
 #formContainer {
-  position: fixed;
-  left: 0;
-  top: 50px; /* Ajustez selon vos besoins */
   background-color: white;
   border: 1px solid #ccc;
   padding: 20px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  /* Utilise toute la largeur disponible dans le conteneur #app */
+  box-sizing: border-box;
+  /* Inclut le padding et la bordure dans les dimensions */
 }
-
